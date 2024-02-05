@@ -726,12 +726,12 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 YY_RULE_SETUP
 #line 7 "exercice1.lex"
-{ printf("Lettre majuscule => %c\n", tolower(yytext[0])); }
+{ printf("Uppercase letter => %c\n", tolower(yytext[0])); }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
 #line 8 "exercice1.lex"
-{ printf("Lettre minuscule => %c\n", toupper(yytext[0])); }
+{ printf("Lowercase letter => %c\n", toupper(yytext[0])); }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
@@ -739,11 +739,11 @@ YY_RULE_SETUP
 { 
             int num = atoi(yytext); 
             if (num > 0) 
-                printf("Entier positif: %d\n", num); 
+                printf("Positive integer: %d\n", num); 
             else if (num < 0) 
-                printf("Entier négatif: %d\n", num); 
+                printf("Negative integer: %d\n", num); 
             else 
-                printf("Entier nul: %d\n", num); 
+                printf("Null integer: %d\n", num); 
         }
 	YY_BREAK
 case 4:
@@ -751,13 +751,13 @@ YY_RULE_SETUP
 #line 18 "exercice1.lex"
 { 
             int num = atoi(yytext); 
-            printf("Entier négatif: %d\n", num); 
+            printf("Negative integer: %d\n", num); 
         }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
 #line 22 "exercice1.lex"
-{ printf("Caractère non pris en charge: %c\n", yytext[0]); }
+{ printf("Unsupported character: %c\n", yytext[0]); }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
@@ -1773,7 +1773,7 @@ void yyfree (void * ptr )
 
 
 int yywrap() {
-    return 1;  // Indicates end of input
+    return 1;
 }
 
 int main() {

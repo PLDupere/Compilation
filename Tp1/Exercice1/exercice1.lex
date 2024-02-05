@@ -4,27 +4,27 @@
 
 %%
 
-[A-Z]   { printf("Lettre majuscule => %c\n", tolower(yytext[0])); }
-[a-z]   { printf("Lettre minuscule => %c\n", toupper(yytext[0])); }
+[A-Z]   { printf("Uppercase letter => %c\n", tolower(yytext[0])); }
+[a-z]   { printf("Lowercase letter => %c\n", toupper(yytext[0])); }
 [0-9]+  { 
             int num = atoi(yytext); 
             if (num > 0) 
-                printf("Entier positif: %d\n", num); 
+                printf("Positive integer: %d\n", num); 
             else if (num < 0) 
-                printf("Entier négatif: %d\n", num); 
+                printf("Negative integer: %d\n", num); 
             else 
-                printf("Entier nul: %d\n", num); 
+                printf("Null integer: %d\n", num); 
         }
 -?[0-9]+ { 
             int num = atoi(yytext); 
-            printf("Entier négatif: %d\n", num); 
+            printf("Negative integer: %d\n", num); 
         }
-.       { printf("Caractère non pris en charge: %c\n", yytext[0]); }
+.       { printf("Unsupported character: %c\n", yytext[0]); }
 
 %%
 
 int yywrap() {
-    return 1;  // Indicates end of input
+    return 1;
 }
 
 int main() {
