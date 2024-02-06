@@ -1,0 +1,5 @@
+Écrire un programme flex permettant de calculer (somme) le nombre de mot et de ligne dans un fichier texte.
+
+flex -o exercice5.lex.c exercice5.lex
+gcc -o exercice5 exercice5.lex.c -lfl
+./exercice5 text_file.txt

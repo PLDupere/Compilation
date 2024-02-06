@@ -1,0 +1,6 @@
+Écrire un programme flex permettant d’afficher la plus grande valeur entière 
+dans un fichier et de calculer leur somme.
+
+flex -o exercice3a.lex.c exercice3a.lex
+gcc -o exercice3a exercice3a.lex.c -lfl
+./exercice3a text_file.txt

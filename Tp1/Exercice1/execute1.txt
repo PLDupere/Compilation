@@ -1,0 +1,6 @@
+Écrire un programme flex permettant de convertir un lettre majuscule en 
+minuscule et vice versa, afficher si un entier est positif ,nul ou négatif.
+
+flex -o exercice1.lex.c exercice1.lex
+gcc -o exercice1 exercice1.lex.c -lfl
+./exercice1

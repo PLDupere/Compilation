@@ -1,6 +1,6 @@
-#line 2 "exercice3.lex.c"
+#line 2 "exercice3a.lex.c"
 
-#line 4 "exercice3.lex.c"
+#line 4 "exercice3a.lex.c"
 
 #define  YY_INT_ALIGNED short int
 
@@ -444,8 +444,8 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "exercice3.lex"
-#line 2 "exercice3.lex"
+#line 1 "exercice3a.lex"
+#line 2 "exercice3a.lex"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -453,8 +453,8 @@ int max_int = 0;
 int sum = 0;
 int wordCount = 0;
 int lineCount = 0;
-#line 457 "exercice3.lex.c"
-#line 458 "exercice3.lex.c"
+#line 457 "exercice3a.lex.c"
+#line 458 "exercice3a.lex.c"
 
 #define INITIAL 0
 
@@ -671,9 +671,9 @@ YY_DECL
 		}
 
 	{
-#line 13 "exercice3.lex"
+#line 13 "exercice3a.lex"
 
-#line 677 "exercice3.lex.c"
+#line 677 "exercice3a.lex.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -732,7 +732,7 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 14 "exercice3.lex"
+#line 14 "exercice3a.lex"
 {
     int num = atoi(yytext);
     if (num > max_int) {
@@ -743,7 +743,7 @@ YY_RULE_SETUP
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 22 "exercice3.lex"
+#line 22 "exercice3a.lex"
 {
     // Counting words
     wordCount++;
@@ -752,7 +752,7 @@ YY_RULE_SETUP
 case 3:
 /* rule 3 can match eol */
 YY_RULE_SETUP
-#line 27 "exercice3.lex"
+#line 27 "exercice3a.lex"
 {
     // Counting lines
     lineCount++;
@@ -760,17 +760,17 @@ YY_RULE_SETUP
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 32 "exercice3.lex"
+#line 32 "exercice3a.lex"
 {
     // Ignore other characters
 }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 36 "exercice3.lex"
+#line 36 "exercice3a.lex"
 ECHO;
 	YY_BREAK
-#line 774 "exercice3.lex.c"
+#line 774 "exercice3a.lex.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1775,7 +1775,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 36 "exercice3.lex"
+#line 36 "exercice3a.lex"
 
 
 int main(int argc, char* argv[]) {

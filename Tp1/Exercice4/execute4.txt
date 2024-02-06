@@ -1,0 +1,5 @@
+Écrire un programme flex permettant de reconnaitre les commentaires dans un fichier.
+
+flex -o exercice4.lex.c exercice4.lex
+gcc -o exercice4 exercice4.lex.c -lfl
+./exercice4 text_file.txt

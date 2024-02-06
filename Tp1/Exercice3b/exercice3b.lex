@@ -1,22 +1,21 @@
 %{
 #include <stdio.h>
+#include <string.h>
 
-int wordCount = 0;
-int lineCount = 1;
+int max_length = 0;
+char longest_word[100]; // Assuming the maximum length of a word is 100 characters
 %}
 
 %%
 [a-zA-ZàáâãäåÀÁÂÃÄÅèéêëÈÉÊËìíîïÌÍÎÏòóôõöùúûüÒÓÔÕÖçÇ]+ {
-    // Counting words
-    wordCount++;
+    int length = strlen(yytext);
+    if (length > max_length) {
+        max_length = length;
+        strcpy(longest_word, yytext);
+    }
 }
 
-\n {
-    // Counting lines
-    lineCount++;
-}
-
-. ; // Ignore other characters
+.|\n    ; // Ignore characters other than letters
 
 %%
 
@@ -36,10 +35,7 @@ int main(int argc, char *argv[]) {
     yylex();
     fclose(file);
 
-    int totalWordCount = wordCount;
-    int totalLineCount = lineCount;
-
-    printf("The sum of words and lines: %d\n", totalWordCount + totalLineCount);
+    printf("The longest word is \"%s\" and its length is %d\n", longest_word, max_length);
 
     return 0;
 }

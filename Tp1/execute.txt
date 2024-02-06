@@ -46,7 +46,7 @@ gcc -o exercice4 exercice4.lex.c -lfl
 --------------------------------------
 
 Écrire un programme flex permettant d’afficher la longueur du 
-mot (chaîne de caractères) le plus long qui existe d'un fichier.
+mot (chaîne de caractères) et le plus long qui existe d'un fichier.
 
 flex -o exercice5.lex.c exercice5.lex
 gcc -o exercice5 exercice5.lex.c -lfl

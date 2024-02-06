@@ -1,0 +1,6 @@
+Écrire un programme flex permettant de compter le nombre de mot et de ligne dans 
+un fichier.
+
+flex -o exercice2.lex.c exercice2.lex
+gcc -o exercice2 exercice2.lex.c -lfl
+./exercice2 text_file.txt

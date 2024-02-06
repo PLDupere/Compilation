@@ -1,0 +1,6 @@
+Écrire un programme flex permettant d’afficher la longueur du 
+mot (chaîne de caractères) et le plus long qui existe d'un fichier.
+
+flex -o exercice3b.lex.c exercice3b.lex
+gcc -o exercice3b exercice3b.lex.c -lfl
+./exercice3b text_file.txt
